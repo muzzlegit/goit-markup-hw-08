@@ -1,10 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  &__conteiner {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+  @media screen and (min-width: 768px) {
+    &__conteiner {
+      display: flex;
+      align-items: center;
+    }
   }
 }
