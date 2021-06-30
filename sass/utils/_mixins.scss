@@ -1,0 +1,10 @@
+@mixin flex-center($disp: flex, $just: center, $alig: center) {
+  display: flex;
+  justify-content: $just;
+  align-items: $alig;
+}
+@mixin font-get-up($lh, $fs: $primary-font-size, $ls: 0.03em) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

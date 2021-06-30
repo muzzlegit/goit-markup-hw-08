@@ -1,0 +1,26 @@
+.address {
+  &__text {
+    margin-top: 0;
+    margin-bottom: 9px;
+
+    font-style: normal;
+    @include font-get-up(1.71);
+    color: $white-text-color;
+  }
+  &__list {
+    @extend %list;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__link {
+    font-style: normal;
+    @include font-get-up(1.71);
+    color: $link-text-color;
+    text-decoration: none;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-text-color;
+  }
+}

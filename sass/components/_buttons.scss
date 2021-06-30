@@ -1,0 +1,80 @@
+// ------Главная кнопка-----
+.button {
+  @include flex-center();
+  display: inline-flex;
+  height: 50px;
+  min-width: 200px;
+  padding: 10px;
+
+  font-weight: 700;
+  @include font-get-up(1.87, $secondary-font-size, 0.06em);
+  color: $white-text-color;
+
+  cursor: pointer;
+  background-color: $active-bg-button-color;
+  border-color: transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms $cubic-function;
+  &:hover,
+  &:focus {
+    background-color: $bg-hero-button-color;
+  }
+  &__plane-icon {
+    margin-left: 10px;
+    fill: $white-text-color;
+  }
+}
+// ------Кнопка фильтра-----
+.button-filter {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-width: 0;
+  border-color: transparent;
+
+  font-family: inherit;
+  font-weight: 500;
+  @include font-get-up(1.62, $secondary-font-size, inherit);
+
+  background-color: $bg-section-color;
+  color: $secondary-text-color;
+
+  transition-property: background-color, box-shadow, color;
+  transition-timing-function: $cubic-function;
+  transition-duration: 250ms;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    background-color: $active-bg-button-color;
+    color: $white-text-color;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+// ------Кнопка зкарытия модального окна-----
+.button-close {
+  @include flex-center();
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 0%;
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  fill: #000000;
+  background-color: inherit;
+
+  transition: fill 250ms $cubic-function;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: $accent-text-color;
+  }
+}

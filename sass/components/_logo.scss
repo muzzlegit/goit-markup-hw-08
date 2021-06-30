@@ -1,0 +1,14 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  @include font-get-up(1.2, 26px, inherit);
+  color: $accent-text-color;
+  text-decoration: none;
+
+  &__text--black {
+    color: $black-text-color;
+  }
+  &__text--white {
+    color: $white-text-color;
+  }
+}

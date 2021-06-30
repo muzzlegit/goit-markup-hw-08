@@ -1,0 +1,31 @@
+.clients {
+  @extend %list;
+
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__link {
+    @include flex-center();
+
+    height: 92px;
+    width: 170px;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    fill: $icon-color;
+
+    transition-property: fill, border-color;
+    transition-timing-function: $cubic-function;
+    transition-duration: 250ms;
+  }
+  &__link:hover,
+  &__link:focus {
+    cursor: pointer;
+    fill: $accent-text-color;
+    border-color: $accent-text-color;
+  }
+}

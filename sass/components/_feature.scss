@@ -1,0 +1,39 @@
+.feature {
+  @extend %list;
+
+  display: flex;
+  margin-bottom: 94px;
+
+  @include font-get-up(1.71);
+  color: $primary-text-color;
+
+  &__item {
+    flex-basis: 270px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__icon {
+    @include flex-center();
+
+    margin-bottom: 30px;
+    height: 120px;
+    width: 270px;
+
+    border-radius: 4px;
+
+    background-color: $bg-section-color;
+  }
+  &__titel {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    @include font-get-up(1.14);
+    color: $secondary-text-color;
+
+    text-transform: uppercase;
+  }
+  &__description {
+    margin: 0;
+  }
+}

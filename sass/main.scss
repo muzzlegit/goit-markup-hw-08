@@ -1,0 +1,30 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./components/buttons";
+
+@import "./base/body";
+@import "./base/conteiner";
+@import "./base/section";
+
+@import "./components/logo";
+
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/contacts";
+
+@import "./components/hero";
+@import "./components/feature";
+@import "./components/works";
+@import "./components/team";
+@import "./components/social";
+@import "./components/clients";
+
+@import "./components/filter";
+@import "./components/examples";
+
+@import "./components/footer";
+@import "./components/address";
+@import "./components/mailing";
+
+@import "./components/modal";
