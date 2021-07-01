@@ -7,10 +7,36 @@
   margin-left: auto;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font-get-up(1.167, 12px, 0.02em);
   color: $primary-text-color;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    @include font-get-up(1.142, $primary-font-size, 0.02em);
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 50px;
+    }
+  }
+
+  &__icon {
+    @media screen and (max-width: 1199px) {
+      margin-right: 8px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
+  }
+
   &__link {
     @include flex-center($just: flex-start);
 
@@ -21,36 +47,17 @@
     transition-property: color, fill;
     transition-timing-function: $cubic-function;
     transition-duration: 250ms;
-  }
-  &__link:hover,
-  &__link:focus {
-    color: $accent-text-color;
-    fill: $accent-text-color;
-  }
-  @media screen and (max-width: 1199px) {
-    padding-top: 21px;
-    padding-bottom: 21px;
-    &__item:not(:last-child) {
-      margin-bottom: 10px;
-    }
-    &__icon {
-      margin-right: 8px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
 
-    &__item:not(:last-child) {
-      margin-right: 50px;
-    }
-    &__link {
+    @media screen and (min-width: 1200px) {
       @include flex-center();
 
       padding-top: 32px;
       padding-bottom: 32px;
     }
-    &__icon {
-      margin-right: 10px;
-    }
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-text-color;
+    fill: $accent-text-color;
   }
 }

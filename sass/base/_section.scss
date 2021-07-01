@@ -3,6 +3,11 @@
   padding-bottom: 60px;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &--secondary {
     background-color: $bg-section-color;
   }
@@ -13,12 +18,8 @@
 
     @include font-get-up(1.179, 28px);
     color: $secondary-text-color;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-top: 94px;
-    padding-bottom: 94px;
 
-    &__title {
+    @media screen and (min-width: 1200px) {
       margin-bottom: 50px;
 
       @include font-get-up(1.167, $title-font-size);
