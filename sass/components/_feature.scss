@@ -1,38 +1,46 @@
 .feature {
-  @extend %list;
-
-  margin-bottom: 30px;
-
-  @include font-get-up(1.71);
-  color: $primary-text-color;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
   @media screen and (min-width: 1200px) {
-    display: flex;
     margin-bottom: 94px;
+  }
+  outline: 1px solid tomato;
+  &__list {
+    @extend %list;
+
+    @include font-get-up(1.71);
+    color: $primary-text-color;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      // margin: -15px;
+    }
   }
   &__item {
     @media screen and (max-width: 767px) {
       display: block;
     }
-
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% - 30px) / 2);
     }
     @media screen and (min-width: 1200px) {
-      flex-basis: 270px;
+      flex-basis: calc((100% - 90px) / 4);
     }
   }
   &__item:not(:last-child) {
     @media screen and (min-width: 1200px) {
       margin-right: 30px;
     }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
   &__item:not(:nth-child(2n)) {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-right: 30px;
+    }
+  }
+  &__item:not(:nth-last-child(-n + 2)) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 30px;
     }
   }
   &__icon {

@@ -1,8 +1,12 @@
 .works {
-  @extend %list;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  &__list {
+    @extend %list;
 
-  display: flex;
-
+    display: flex;
+  }
   &__item {
     position: relative;
     flex-basis: calc((100% - 30px * 2) / 3);

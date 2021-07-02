@@ -1,4 +1,4 @@
-.navigation__list, .contacts, .feature {
+.navigation__list, .contacts, .feature__list, .works__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -430,7 +430,16 @@ body {
 }
 
 .feature {
-  margin-bottom: 30px;
+  outline: 1px solid tomato;
+}
+
+@media screen and (min-width: 1200px) {
+  .feature {
+    margin-bottom: 94px;
+  }
+}
+
+.feature__list {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -438,21 +447,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .feature {
+  .feature__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .feature {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 94px;
   }
 }
 
@@ -471,8 +471,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .feature__item {
-    -ms-flex-preferred-size: 270px;
-        flex-basis: 270px;
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -482,9 +482,21 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  .feature__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature__item:not(:nth-child(2n)) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
   }
 }
 
@@ -524,5 +536,55 @@ body {
 
 .feature__description {
   margin: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .works {
+    display: none;
+  }
+}
+
+.works__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.works__item {
+  position: relative;
+  -ms-flex-preferred-size: calc((100% - 30px * 2) / 3);
+      flex-basis: calc((100% - 30px * 2) / 3);
+}
+
+.works__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.works__img {
+  display: block;
+}
+
+.works__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 /*# sourceMappingURL=main.css.map */
