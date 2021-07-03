@@ -10,12 +10,15 @@
   &__item {
     position: relative;
     flex-basis: calc((100% - 30px * 2) / 3);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+
   &__img {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
   &__description {
     @include flex-center();

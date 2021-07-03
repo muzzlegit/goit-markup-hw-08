@@ -1,22 +1,48 @@
 .team {
   @extend %list;
-
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__card {
-    flex-basis: calc((100% - 30px * 3) / 4);
     text-align: center;
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+      &:not(:nth-child(2n)) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          margin-right: 30px;
+        }
+      }
+      &:not(:nth-last-child(-n + 2)) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 30px * 3) / 4);
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
 
     background-color: #ffffff;
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
   }
-  &__card:not(:last-child) {
-    margin-right: 30px;
-  }
+
   &__img {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
   &__box {
     padding: 30px;
@@ -26,14 +52,14 @@
     margin-bottom: 10px;
 
     font-weight: 500;
-    @include font-get-up(1.17, $secondary-font-size);
+    @include font-get-up(1.188, $secondary-font-size);
     color: $secondary-text-color;
   }
   &__description {
     margin-top: 0;
     margin-bottom: 16px;
 
-    @include font-get-up(1.17, $secondary-font-size);
+    @include font-get-up(1.88, $secondary-font-size);
     color: $primary-text-color;
   }
 }

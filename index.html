@@ -114,16 +114,59 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="works__list pointkiller">
             <li class="works__item">
-              <img class="works__img" src="./images/box1.jpg" alt="Изображение ноутбука с макетами" width="370" height="294">
+              <picture>
+                <source 
+                  srcset="
+                    ./images/desktop/box1_desktop_1x.webp 1x,
+                    ./images/desktop/box1_desktop_2x.webp 2x
+                  "
+                  type="image/webp"
+                  />
+                <img class="works__img" 
+                  srcset="
+                    ./images/desktop/box1_desktop_1x.jpg 1x,
+                    ./images/desktop/box1_desktop_2x.jpg 2x
+                  "                  
+                  src="./images/desktop/box1_desktop_1x.jpg"
+                  alt="Изображение ноутбука с макетами"
+                  width="370" height="294">
+              </picture>
               <p class="works__description">Десктопные приложения</p>
             </li>
             <li class="works__item">
-              <img class="works__img" src="./images/box2.jpg" alt="Изображение ноутбука с макетами" width="370" height="294">
+              <picture>
+                <source 
+                  srcset="
+                    ./images/desktop/box2_desktop_1x.webp 1x,
+                    ./images/desktop/box2_desktop_2x.webp 2x
+                  " 
+                  type="image/webp" />
+                <img class="works__img"
+                  srcset="
+                    ./images/desktop/box2_desktop_1x.jpg 1x,
+                    ./images/desktop/box2_desktop_2x.jpg 2x
+                  " 
+                  src="./images/desktop/box2_desktop_1x.jpg" 
+                  alt="Изображение ноутбука с макетами"
+                  width="370" height="294">
+              </picture>
               <p class="works__description">Мобильные приложения</p>
             </li>
             <li class="works__item">
-              <img class="works__img" src="./images/box3.jpg" alt="Изображение планшета с цветовой диаграммой" width="370"
-                height="294">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/box3_desktop_1x.webp 1x,
+                    ./images/desktop/box3_desktop_2x.webp 2x
+                  " type="image/webp" />
+                <img class="works__img"
+                  srcset="
+                    ./images/desktop/box3_desktop_1x.jpg 1x,
+                    ./images/desktop/box3_desktop_2x.jpg 2x
+                  " src="./images/desktop/box3_desktop_1x.jpg"
+                  alt="Изображение планшета с цветовой диаграммой"
+                  width="370" height="294">
+              </picture>
               <p class="works__description">Дизайнерские решения</p>
             </li>
           </ul>
@@ -136,7 +179,32 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="team pointkiller">
           <li class="team__card">
-            <img class="team__img" src="./images/tm1.jpg" alt="Фото Игоря Демьяненко" width="270" height="260">
+            <picture>
+              <source 
+                srcset="./images/desktop/tm1_desktop_1x.webp 1x, ./images/desktop/tm1_desktop_2x.webp 2x"
+                type = "image/webp"
+                media="(min-width: 1200px)">
+              <source 
+                srcset="./images/desktop/tm1_desktop_1x.jpg 1x, ./images/desktop/tm1_desktop_2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <source
+                srcset="./images/tablet/tm1_tablet_1x.webp 1x, ./images/tablet/tm1_tablet_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 768px)">
+              <source
+                srcset="./images/tablet/tm1_tablet_1x.jpg 1x, ./images/tablet/tm1_tablet_2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source 
+                srcset="./images/mobile/tm1_mobile_1x.webp 1x, ./images/mobile/tm1_mobile_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 480px)">
+              <source
+              srcset="./images/mobile/tm1_mobile_1x.jpg 1x, ./images/mobile/tm1_mobile_2x.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__img"
+                src="./images/mobile/tm1_mobile_1x.jpg"
+                alt="Фото Игоря Демьяненко">
+            </picture>
             <div class="team__box">
               <h3 class="team__title">Игорь Демьяненко</h3>
               <p class="team__description">Product Designer</p>
@@ -173,7 +241,26 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__img" src="./images/tm2.jpg" alt="Фото Ольги Репиной" width="270" height="260">
+            <picture>
+              <source srcset="./images/desktop/tm2_desktop_1x.webp 1x, ./images/desktop/tm2_desktop_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 1200px)">
+              <source srcset="./images/desktop/tm2_desktop_1x.jpg 1x, ./images/desktop/tm2_desktop_2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="./images/tablet/tm2_tablet_1x.webp 1x, ./images/tablet/tm2_tablet_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 768px)">
+              <source srcset="./images/tablet/tm2_tablet_1x.jpg 1x, ./images/tablet/tm2_tablet_2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/mobile/tm2_mobile_1x.webp 1x, ./images/mobile/tm2_mobile_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 480px)">
+              <source srcset="./images/mobile/tm2_mobile_1x.jpg 1x, ./images/mobile/tm2_mobile_2x.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__img"
+                src="./images/mobile/tm2_mobile_1x.jpg"
+                alt="Фото Ольги Репиной">
+            </picture>
             <div class="team__box">
               <h3 class="team__title">Ольга Репина</h3>
               <p class="team__description">Frontend Developer</p>
@@ -210,7 +297,26 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__img" src="./images/tm3.jpg" alt="Фото Николая Тарасова" width="270" height="260">
+            <picture>
+              <source srcset="./images/desktop/tm3_desktop_1x.webp 1x, ./images/desktop/tm3_desktop_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 1200px)">
+              <source srcset="./images/desktop/tm3_desktop_1x.jpg 1x, ./images/desktop/tm3_desktop_2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="./images/tablet/tm3_tablet_1x.webp 1x, ./images/tablet/tm3_tablet_2x.webp 2x" 
+                type="image/webp"
+                media="(min-width: 768px)">
+              <source srcset="./images/tablet/tm3_tablet_1x.jpg 1x, ./images/tablet/tm3_tablet_2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/mobile/tm3_mobile_1x.webp 1x, ./images/mobile/tm3_mobile_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 480px)">
+              <source srcset="./images/mobile/tm3_mobile_1x.jpg 1x, ./images/mobile/tm3_mobile_2x.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__img"
+                src="./images/mobile/tm3_mobile_1x.jpg"
+                alt="Фото Николая Тарасова">
+            </picture>
             <div class="team__box">
               <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__description">Marketing</p>
@@ -247,7 +353,26 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__img" src="./images/tm4.jpg" alt="Фото Михаила Ермакова" width="270" height="260">
+            <picture>
+              <source srcset="./images/desktop/tm4_desktop_1x.webp 1x, ./images/desktop/tm4_desktop_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 1200px)">
+              <source srcset="./images/desktop/tm4_desktop_1x.jpg 1x, ./images/desktop/tm4_desktop_2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="./images/tablet/tm4_tablet_1x.webp 1x, ./images/tablet/tm4_tablet_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 768px)">
+              <source srcset="./images/tablet/tm4_tablet_1x.jpg 1x, ./images/tablet/tm4_tablet_2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/mobile/tm4_mobile_1x.webp 1x, ./images/mobile/tm4_mobile_2x.webp 2x"
+                type="image/webp"
+                media="(min-width: 480px)">
+              <source srcset="./images/mobile/tm4_mobile_1x.jpg 1x, ./images/mobile/tm4_mobile_2x.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__img"
+                src="./images/mobile/tm4_mobile_1x.jpg"
+                alt="Фото Михаила Ермакова">
+            </picture>
             <div class="team__box">
               <h3 class="team__title">Михаил Ермаков</h3>
               <p class="team__description">UI Designer</p>
@@ -287,7 +412,7 @@
       </div>
     </section>
     <!--Секция Постоянные клиенты-->
-    <!-- <section class="section" >
+    <section class="section" >
       <div class="conteiner">
         <h2 class="section__title">Постоянные клиенты</h2>
         <ul class="clients pointkiller">
@@ -335,10 +460,10 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
   </main>
     <!--Подвал-->
-  <!-- <footer class="footer">
+  <footer class="footer">
     <div class="conteiner footer__conteiner">
       <div class="footer__adds-box">
         <a class="logo footer__logo" href="/">Web<span class="logo__text--white">Studio</span></a>
@@ -402,7 +527,7 @@
         </form>
       </div>
     </div>
-  </footer> -->
+  </footer>
   <!--Модальное окно -->
   <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
