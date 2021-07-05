@@ -841,17 +841,27 @@ body {
 }
 
 .footer__conteiner {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer__conteiner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__conteiner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -861,10 +871,38 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer__adds-box {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__adds-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+    margin-right: 165px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__adds-box {
     margin-right: 70px;
   }
+}
+
+.footer__join-box {
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -874,7 +912,20 @@ body {
 }
 
 .footer__sign-box {
-  margin-left: auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__sign-box {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__sign-box {
+    margin-left: auto;
+    margin-bottom: 0px;
+  }
 }
 
 .footer__title {
@@ -893,6 +944,7 @@ body {
 @media screen and (max-width: 767px) {
   .address {
     margin-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -944,10 +996,10 @@ body {
 }
 
 .mailing-form__title {
-  display: inline-block;
+  display: block;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .mailing-form__title {
     margin-bottom: 20px;
   }
@@ -955,6 +1007,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .mailing-form__title {
+    display: inline-block;
     margin-right: 12px;
   }
 }

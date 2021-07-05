@@ -4,12 +4,13 @@
   }
 
   &__title {
-    display: inline-block;
+    display: block;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
       margin-bottom: 20px;
     }
     @media screen and (min-width: 1200px) {
+      display: inline-block;
       margin-right: 12px;
     }
   }

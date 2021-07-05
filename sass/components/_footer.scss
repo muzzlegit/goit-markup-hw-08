@@ -4,10 +4,14 @@
   background-color: #2f303a;
 
   &__conteiner {
-    text-align: center;
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: baseline;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+    display: flex;
+    align-items: baseline;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -17,23 +21,41 @@
     margin-bottom: 20px;
   }
   &__adds-box {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+      margin-right: 165px;
+    }
     @media screen and (min-width: 1200px) {
       margin-right: 70px;
     }
   }
   &__join-box {
+    text-align: center;
     @media screen and (max-width: 767px) {
       margin-bottom: 60px;
     }
   }
   &__sign-box {
-    margin-left: auto;
+    text-align: center;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+      margin-bottom: 0px;
+    }
   }
   &__title {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 20px;
-
     font-weight: 700;
     @include font-get-up(1.41);
     color: $white-text-color;
