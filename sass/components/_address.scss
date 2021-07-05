@@ -1,8 +1,14 @@
 .address {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
   &__text {
     margin-top: 0;
-    margin-bottom: 9px;
-
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
     font-style: normal;
     @include font-get-up(1.71);
     color: $white-text-color;
@@ -11,7 +17,10 @@
     @extend %list;
   }
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
   &__link {
     font-style: normal;

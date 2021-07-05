@@ -4,6 +4,7 @@
   background-color: #2f303a;
 
   &__conteiner {
+    text-align: center;
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: baseline;
@@ -12,13 +13,19 @@
 
   &__logo {
     display: inline-block;
+    padding: 0;
     margin-bottom: 20px;
   }
   &__adds-box {
-    margin-right: 70px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
-  // &__join-box {
-  // }
+  &__join-box {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+  }
   &__sign-box {
     margin-left: auto;
   }
