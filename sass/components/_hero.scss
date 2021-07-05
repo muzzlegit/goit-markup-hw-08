@@ -1,5 +1,5 @@
 .hero {
-  max-width: 1600px;
+  max-width: 480px;
   margin-right: auto;
   margin-left: auto;
   height: 400px;
@@ -20,12 +20,13 @@
       ),
       url(../images/mobile/herobg_mobile_2x.jpg);
   }
-  background-color: #c4c4c4;
+
   text-align: center;
 
   background-repeat: no-repeat;
-  background-position: cover;
-  @media screen and (min-width: 480px) {
+  background-position: center;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -41,7 +42,8 @@
         url(../images/tablet/herobg_tablet_2x.jpg);
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -61,6 +63,7 @@
         url(../images/desktop/herobg_desktop_2x.jpg);
     }
   }
+
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
