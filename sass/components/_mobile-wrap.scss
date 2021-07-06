@@ -1,0 +1,25 @@
+.mobile-wrap {
+  @media screen and (max-width: 767px) {
+    transform: translateY(-100%);
+  }
+
+  &.is-open {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    padding: 48px 40px;
+    background-color: #fff;
+    flex-direction: column;
+
+    transform: translateY(0);
+
+    transition: transform 700ms $cubic-function;
+  }
+
+  display: flex;
+  width: 100%;
+}

@@ -21,7 +21,7 @@
     <div class="conteiner header__conteiner">
       <a class="logo" href="/">Web<span class="logo__text--black">Studio</span></a>
       <!--Навигация по сайту-->
-      <div class="mobile-menu"id="mobile-menu" data-menu>
+      <div class="mobile-wrap" id="mobile-wrap" data-menu>
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -53,22 +53,45 @@
             </a>
           </li>
         </ul>
+        <ul class="networks pointkiller">
+          <li class="networks__item">
+            <a href="" class="networks__link">
+              Instagram
+            </a>
+          </li>
+          <li class="networks__item">
+            <a href="" class="networks__link">
+              Twitter
+            </a>
+          </li>
+          <li class="networks__item">
+            <a href="" class="networks__link">
+              Facebook
+            </a>
+          </li>
+          <li class="networks__item">
+            <a href="" class="networks__link">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-
-
-      <button 
-        class="button-menu" 
+      <button
+        class="button-mobile"
         type="button"
         aria-expanded="false"
-        aria-controls="mobile-menu"
-        data-menu-button >
+        aria-controls="mobile-wrap"
+        data-menu-button>
         <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-          <use class="button-menu__icon-menu" href=./images/icons.svg#icon-menu></use>
-          <use class="button-menu__icon-close" href=./images/icons.svg#icon-close></use>
+          <use class="button-mobile__icon-menu" href=./images/icons.svg#icon-menu></use>
+          <use class="button-mobile__icon-close" href=./images/icons.svg#icon-close></use>
         </svg>
       </button>
+    </div>
+
   </header>
+
+
   <!--Основной контент-->
   <main>
     <!--Секция Герой-->
@@ -545,7 +568,7 @@
     </div>
   </footer>
   <!--Модальное окно -->
-  <!-- <div class="backdrop is-hidden" data-modal>
+  <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <form class="request-form" name="request-form">
         <p class="request-form__title">Оставьте свои данные, мы вам перезвоним</p>
@@ -595,7 +618,7 @@
       </form>
     </div>
   </div> -->
-  <!-- Мобильное меню-->
+  <!-- Мобильное меню -->
 
   <script src="./js/modal.js"></script>
   <script src="./js/mobile-menu.js"></script>

@@ -2,9 +2,11 @@
   border-bottom: 1px solid #ececec;
 
   &__conteiner {
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: center;
-    }
+    position: relative;
+    display: flex;
+    align-items: center;
+    // @media screen and (min-width: 768px) {
+    //   align-items: center;
+    // }
   }
 }
