@@ -118,7 +118,7 @@
   right: 10px;
   padding: 0;
   margin-left: 0;
-  z-index: 999;
+  z-index: 997;
   height: 40px;
   width: 40px;
   border: 0;
@@ -1377,6 +1377,7 @@ body {
 }
 
 .modal {
+  z-index: 999;
   position: relative;
   display: block;
   background-color: #ffffff;
@@ -1647,11 +1648,11 @@ body {
 
 .mobile-wrap.is-open {
   position: fixed;
+  z-index: 997;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 998;
   padding: 48px 40px;
   background-color: #fff;
   -webkit-box-orient: vertical;
